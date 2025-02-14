@@ -35,7 +35,12 @@ function sorteo(ListaN) {
 }
     
 function sortearAmigo() {
-    console.log(sorteo(ListaN));
-    document.getElementById("resultado").innerHTML = (`El amigo sorteado es ${amigos[sorteo(ListaN)]}`);
+    if (ListaN > 1) {
+        console.log(sorteo(ListaN));
+        document.getElementById("resultado").innerHTML = (`El amigo sorteado es ${amigos[sorteo(ListaN)]}`);
+    }
+    else {
+        alert('Debe agregar más nombres para poder realizar el sorteo.');
+    }
         
 }
